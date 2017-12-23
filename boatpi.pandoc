@@ -1,6 +1,19 @@
+---
+author: Lukas Galke
+date: 2017/12/24
+title: BoatPi
+subtitle: A Boat Navigation System
+bibliography: boatpi.bib
+documentclass: scrartcl
+
+---
+
+
+
+
 # Boat Navigation System
 
-A Raspberry Pi Boat Navigation System, based on the guide from Martin Loschwith [^1].
+A Raspberry Pi Boat Navigation System, based on the guide from Martin Loschwith [@losch16].
 
 ## Hardware  
 
@@ -97,7 +110,6 @@ in the `/boot/config.txt` file [^1]. Changes will take effect after a reboot.
 
 
 
-[^1]: Martin Loschwitz: Maritime navigation with a Rasp Pi and OpenCPN, 2016, URL: http://www.raspberry-pi-geek.com/Archive/2016/16/Maritime-navigation-with-a-Rasp-Pi-and-OpenCPN.
 [^3]: http://o-charts.org
 [^2]: https://opencpn.org/OpenCPN/info/about.html
 [^4]: https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual:getting_started:opencpn_installation:raspberrypi_rpi2
