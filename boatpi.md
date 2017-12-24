@@ -3,13 +3,9 @@ author: Lukas Galke
 date: 2017/12/24
 title: BoatPi
 subtitle: A Boat Navigation System
-bibliography: boatpi.bib
 documentclass: scrartcl
 
 ---
-
-
-
 
 # Boat Navigation System
 
@@ -57,7 +53,7 @@ Test the set-up by issuing `cgps` in a command prompt.
 
 ### Setting up OpenCPN
 
-The OpenCPN navigation software can be installed on the Raspberry Pi with the following steps [^4]:
+The OpenCPN navigation software can be installed on the Raspberry Pi with [the following steps](https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual:getting_started:opencpn_installation:raspberrypi_rpi2):
 
 1. Edit the package sources via `sudo nano /etc/apt/sources.list`.
 1. Add the line `deb http://ppa.launchpad.net/opencpn/opencpn/ubuntu/ trusty main`. Make sure to save the changes.
@@ -69,12 +65,12 @@ The OpenCPN navigation software can be installed on the Raspberry Pi with the fo
 
 ### Supported Chart Formats
 
-OpenCPN is compatible with the following chart formats[^2]:
+OpenCPN supports the following [chart formats](https://opencpn.org/OpenCPN/info/about.html):
 
 - Worldwide standard S56 and encrypted S63 vector chart.
 - BSB v3 and earlier raster charts.
 - CM93 vector charts with per cell offset corrections
-- ENCs, distributed by o-charts.org [^3] for selected regions
+- ENCs, distributed by [o-charts](http://o-charts.org) for selected regions
 
 ## Fine-tuning
 
@@ -83,7 +79,8 @@ OpenCPN is compatible with the following chart formats[^2]:
 Since the power source on the boat may be limited,
 it makes sense to break down the power demands of the respective Raspberry Pi modules .
 Raspberry Pi requires a power supply with +5,1V. 
-The amperage depends on the connected modules [^5]:
+According to the official Raspberry Pi [website](https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md),
+the amperage depends on the connected modules:
 
 - Raspberry Pi Model B requires 500 mA minimum
 - HDMI port 50mA
@@ -106,11 +103,9 @@ framebuffer_depth=32
 framebuffer_ignore_alpha=1
 ```
 
-in the `/boot/config.txt` file [^1]. Changes will take effect after a reboot.
+in the `/boot/config.txt` file [@losch16]. Changes will take effect after a reboot.
 
 
+## Summary
 
-[^3]: http://o-charts.org
-[^2]: https://opencpn.org/OpenCPN/info/about.html
-[^4]: https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual:getting_started:opencpn_installation:raspberrypi_rpi2
-[^5]: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
+
