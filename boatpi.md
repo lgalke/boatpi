@@ -8,7 +8,6 @@ subtitle: A Boat Navigation System Using a Raspberry Pi and OpenCPN
 documentclass: scrartcl
 links-as-notes: True
 colorlinks: True
-citecolor: green
 toc: True
 ---
 
@@ -127,8 +126,8 @@ charts need to be present in a OpenCPN-compatible format.
 When the GPU of the Raspberry Pi is to weak or the power consumption is too
 high, reduce the screen resolution. Run `sudo raspi-config`, navigate to
 *Advanced Options > Resolution* and set resolution according to your display
-(720p is recommended). Run `sudo reboot`, to let changes within `raspi-config`
-take effect.
+(720p is recommended). Then issue a reboot (`sudo reboot`), to let changes
+within `raspi-config` take effect.
 
 ## Adjust the Framebuffer
 

@@ -78,7 +78,7 @@ When deploying the navigation system on the boat, some key aspects need to be co
 Reduce Screen Resolution
 ------------------------
 
-When the GPU of the Raspberry Pi is to weak or the power consumption is too high, reduce the screen resolution. Run `sudo raspi-config`, navigate to *Advanced Options &gt; Resolution* and set resolution according to your display (720p is recommended). Run `sudo reboot`, to let changes within `raspi-config` take effect.
+When the GPU of the Raspberry Pi is to weak or the power consumption is too high, reduce the screen resolution. Run `sudo raspi-config`, navigate to *Advanced Options &gt; Resolution* and set resolution according to your display (720p is recommended). Then issue a reboot (`sudo reboot`), to let changes within `raspi-config` take effect.
 
 Adjust the Framebuffer
 ----------------------
