@@ -7,6 +7,8 @@ boatpi.pdf: boatpi.md $(BIB)
 
 README.md: boatpi.md $(BIB)
 	pandoc --bibliography $(BIB) --to markdown_github -o $@ $<
+	echo >> README.md
+	echo "<!-- Do not modify this file, it is auto-generated from boatpi.md -->" >> README.md
 
 
 clean:

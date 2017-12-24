@@ -128,3 +128,5 @@ This guide is also available on [GitHub](https://github.com/lgalke/boatpi). It c
 Christoffersen, Jens. 2016. “Make a Gps Navigation System for a Boat with a Raspberry Pi.” [www.allaboutcircuits.com](www.allaboutcircuits.com).
 
 Loschwitz, Martin. 2016. “Maritime Navigation with a Rasp Pi and Opencpn.” [www.raspberry-pi-geek.com](www.raspberry-pi-geek.com).
+
+<!-- Do not modify this file, it is auto-generated from boatpi.md -->
