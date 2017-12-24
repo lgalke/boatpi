@@ -1,8 +1,10 @@
 ---
-author: Lukas Galke
+author:
+- Lukas Galke
+- Melanie Poech
 date: 2017/12/24
 title: BoatPi
-subtitle: A Boat Navigation System Using a Raspberry Pi
+subtitle: A Boat Navigation System Using a Raspberry Pi and OpenCPN
 documentclass: scrartcl
 links-as-notes: True
 colorlinks: True
@@ -30,9 +32,9 @@ In the following, we [first](#prep) describe the basic setup of the Raspberry Pi
 optimization methods for the Raspberry and highlight some boat-specific
 adaptions which need to be considered independently of this guide.
 
-## Preparation {#prep}
+# Preparation {#prep}
 
-### Requirements
+## Requirements {.unnumbered}
 
 - Raspberry Pi
 - Power Supply
@@ -45,7 +47,7 @@ We start by setting up the Raspberry Pi. Insert the SD card, attach mouse and ke
 Connect the GPS module with the RPi and finally, connect the power supply.
 After the Raspberry has booted, assert that its software is up-to-date (`apt-get update && apt-get upgrade`).
 
-### Installing GPS Requirements
+## Installing the GPS Service
 
 Next, we install the software to communicate with the GPS module, namely `gpsd`.
 To install the `gpsd` GPS daemon, issue the following command:
@@ -65,7 +67,7 @@ issuing `cgps` in a command prompt. In case something went wrong, consult the
 [detailed installation instructions of
 `gpsd`](http://www.catb.org/gpsd/installation.html).
 
-### Setting up OpenCPN
+## Setting up OpenCPN
 
 Now, we install the [OpenCPN](https://opencpn.org) navigation software on the Raspberry Pi:
 
@@ -105,11 +107,11 @@ graphical user interface. When there are problems with the installation or
 further information on the usage of OpenCPN, please refer to the [OpenCPN User
 Manual](https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual).
 
-## Getting on Board {#boat}
+# Getting on Board {#boat}
 
 When deploying the navigation system on the actual boat.
 
-### Reduce screen resolution
+## Reduce screen resolution
 
 When the GPU of the Raspberry Pi is to weak or the power consumption is too high,
 reduce the screen resolution:
@@ -117,7 +119,7 @@ reduce the screen resolution:
 1. Run `sudo raspi-config`, navigate to *Advanced Options > Resolution* and set resolution according to your display (720p is recommended).
 1. Run `sudo reboot`, to let changes within `raspi-config` take effect.
 
-### Optimize performance
+## Optimize performance
 
 To further optimize the performance of the Raspberry Pi, @losch16 suggests to set:
 
@@ -129,7 +131,7 @@ framebuffer_ignore_alpha=1
 in the `/boot/config.txt` file, before performing a reboot.
 This reduced the buffer rate and transparency values for the display.
 
-### Power Consumption
+## Power Consumption
 
 It might be necessary to make use of an *12 to 5 Volt converter* while
 connecting the Raspberry Pi with the boats power source. Since the power source
@@ -155,7 +157,7 @@ simultaneous charging and providing power. A sufficiently large power bank can
 supply the boat navigation system trip.
 
 
-### Supported Chart Formats
+## Supported Chart Formats
 
 OpenCPN supports the following [chart formats](https://opencpn.org/OpenCPN/info/about.html):
 
@@ -167,7 +169,7 @@ OpenCPN supports the following [chart formats](https://opencpn.org/OpenCPN/info/
 When conversion from different formats is required, please refer to the [Supplementary Software Manual](https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software) of OpenCPN.
 
 
-## Summary
+# Summary
 
 In summary, we turned a Raspberry Pi and a GPS module into a chart plotter
 using OpenCPN. For more details on using OpenCPN, please refer to the [OpenCPN
@@ -177,3 +179,7 @@ The follow-up steps could include adding further components (weather, compass,
 ...) to the boat navigation system. In this case, the openplotter platform
 could prove helpful.
 
+This guide is also available on [GitHub](https://github.com/lgalke/boatpi).
+It can be further extended by experiences from setting up and using the first prototype.
+
+---
